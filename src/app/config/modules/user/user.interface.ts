@@ -1,26 +1,26 @@
 import { Model } from "mongoose";
 
-type TFullName = {
+export type TFullName = {
     firstName: string;
     lastName: string;
-  }
-  
-  type TAddress = {
+}
+
+export type TAddress = {
     street: string;
     city: string;
     country: string;
-  }
-  
-  type TOrder = {
+}
+
+export type TOrder = {
     productName: string;
     price: number;
     quantity: number;
-  }
-  
-  type TUser = {
+}
+
+export type TUser = {
     userId: number;
     username: string;
-    password: string; 
+    password: string;
     fullName: TFullName;
     age: number;
     email: string;
@@ -28,8 +28,8 @@ type TFullName = {
     hobbies: string[];
     address: TAddress;
     orders: TOrder[];
-  }
-  
-  export interface UserModel extends Model<TUser>{
-    
-  }
+}
+
+export interface UserModel extends Model<TUser> {
+
+}
